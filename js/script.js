@@ -16,7 +16,10 @@ const task02 = () => {
   const random01 = Math.floor(Math.random() * 5);
   const random02 = Math.floor(Math.random() * 5);
 
-  if (random01 + random02 != 0 && Math.min(random01, random02) != 0) {
+  console.log(random01)
+  console.log(random02)
+
+  if (random01 * random02) {
     console.log(
       Math.max(random01, random02) / Math.min(random01, random02).toFixed(2)
     );
@@ -89,14 +92,76 @@ const task05 = ()=>{
 }
 
 const task06 = () =>{
-    const random01 = Math.floor(Math.random() * 20) - 10;
-    const random02 = Math.floor(Math.random() * 20) - 10;
-    const random03 = Math.floor(Math.random() * 20) - 10;
+    const random01 = Math.floor(Math.random() * 21) - 10;
+    const random02 = Math.floor(Math.random() * 21) - 10;
+    const random03 = Math.floor(Math.random() * 21) - 10;
 
-    let  = '['
+    if (random01>=0){
+      console.log(`{${random01}}`)
+    }else{
+      console.log(`[${random01}]`)
+    }
+    if (random02>=0){
+      console.log(`{${random02}}`)
+    }else{
+      console.log(`[${random02}]`)
+    }
+    if (random03>=0){
+      console.log(`{${random03}}`)
+    }else{
+      console.log(`[${random03}]`)
+    }
 
 }
 
+const task07 = () =>{
+  const candles = Math.floor(Math.random() * 3001);
+  const candlePrice = 1;
+  let amount = candles*candlePrice;
+
+  if (amount > 2000){
+    amount -=(amount*(4/100))
+  }else if(amount>1000){
+    amount-=(amount*(3/100))
+  }
+  
+  console.log(`${candles} žvakių už ${amount.toFixed(2)} pinigų`)
+  
+}
+
+const task08 = () =>{
+  const random01 = Math.floor(Math.random() * 101);
+  const random02 = Math.floor(Math.random() * 101);
+  const random03 = Math.floor(Math.random() * 101);
+
+  console.log(random01)
+  console.log(random02)
+  console.log(random03)
+
+  console.log(Math.round((random01+random02+random03)/3))
+
+  let count = 0;
+  let amount = 0;
+
+  if(random01>9 && random01 <91){
+    count+=1;
+    amount+=random01;
+  }
+  if(random02>9 && random02 <91){
+    count+=1;
+    amount+=random02;
+  }
+
+  if(random03>9 && random03 <91){
+    count+=1;
+    amount+=random03;
+  }
+
+  if(count){
+    console.log(Math.round(amount/count))
+  }
+  
+}
 
 // task01();
 // task02();
@@ -104,3 +169,6 @@ const task06 = () =>{
 // task04();
 // task05();
 // task05();
+// task06();
+// task07();
+// task08();
