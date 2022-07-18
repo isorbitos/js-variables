@@ -38,9 +38,9 @@ const task03 = () => {
 }
 
 const task04 = ()=>{
-    const random01 = Math.floor(Math.random() * 11);
-    const random02 = Math.floor(Math.random() * 11);
-    const random03 = Math.floor(Math.random() * 11);
+    const random01 = Math.floor(Math.random() * 10) +1;
+    const random02 = Math.floor(Math.random() * 10) +1;
+    const random03 = Math.floor(Math.random() * 10) +1;
     console.log(random01+random02>random03 && random02+random03>random01 && random01+random03>random02);
 }
 
@@ -159,37 +159,37 @@ const task08 = () =>{
 }
 
 const task09 = ()=>{
-  const hours = Math.floor(Math.random() * 24);
-  const minutes = Math.floor(Math.random() * 60);
-  const seconds = Math.floor(Math.random() * 60);
+  const hours = 23;
+  const minutes = 59;
+  const seconds = 59;
 
   console.log(`${hours}:${minutes}:${seconds}`);
 
   const allSeconds = hours*3600 + minutes*60 +seconds;
   const secondsAfterUpdate = allSeconds + Math.floor(Math.random() * 301);
 
-  const hoursAfter = Math.floor(secondsAfterUpdate/3600)
+  const hoursAfter = Math.floor((secondsAfterUpdate/3600)%24)
   const minutesAfter = Math.floor((secondsAfterUpdate/60)%60)
   const secondsAfter = secondsAfterUpdate%60;
 
   console.log(`${hoursAfter}:${minutesAfter}:${secondsAfter}`);
 
 }
-console.log('--1--')
-task01();
-console.log('--2--')
-task02();
-console.log('--3--')
-task03();
-console.log('--4--')
-task04();
-console.log('--5--')
-task05();
-console.log('--6--')
-task06();
-console.log('--7--')
-task07();
-console.log('--8--')
-task08();
-console.log('--9--')
-task09();
+// console.log('--1--')
+// task01();
+// console.log('--2--')
+// task02();
+// console.log('--3--')
+// task03();
+// console.log('--4--')
+// task04();
+// console.log('--5--')
+// task05();
+// console.log('--6--')
+// task06();
+// console.log('--7--')
+// task07();
+// console.log('--8--')
+// task08();
+// console.log('--9--')
+ task09();
